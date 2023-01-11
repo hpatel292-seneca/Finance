@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quete
+{% endblock %}
+
+{% block main %}
+    {% if query %}
+        <p>
+            A share of {{ query.name}} ({{ query.symbol }}) costs {{ query.price | usd }}
+        </p>
+    {% endif %}
+{% endblock %}
